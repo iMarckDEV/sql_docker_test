@@ -5,7 +5,7 @@ Welcome to the iMarckDEV Blog Repository! This repository contains the source co
 # Description
 So in this excercise i'll launch a server using Docker in a local environment, to load some tables and creating some tables and queries:
 
-1. Launch the Docker server in local
+## 1. Launch the Docker server in local
 
 Based in the  *Dockerfile* in the repo
 
@@ -14,7 +14,7 @@ docker image build -t flask-test .
 docker run -p 5000:5000 -d flask-test
 ```
 
-2. The ETL in python
+## 2. The ETL in python
 
 So, basically the scripts in python just use flask, and sqlitle2 in *app.py*, 
 with principals endpoits:
@@ -27,15 +27,17 @@ with principals endpoits:
 @app.route('/query2')
 ```
 
-3. The local host endpoints
+## 3. The local host endpoints
 in localhost 127.0.0.1:5000
 
 ![INDEX_LOAD](/images/pricipal_load.png)
 
 in localhost 127.0.0.1:5000/query1
+
 ![QUERY1](/images/query1.png)
 
 in localhost 127.0.0.1:5000/query2
+
 ![QUERY2](/images/query2.png)
 
 ## Join the Community
