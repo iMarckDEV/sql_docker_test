@@ -16,7 +16,7 @@ docker run -p 5000:5000 -d flask-test
 
 ## 2. The ETL in python
 
-So, basically the scripts in python just use flask, and sqlitle2 in *app.py*, 
+So, basically the scripts in python just use flask, and sqlitle3 in *app.py*, 
 with principals endpoits:
 
 ```python
@@ -30,7 +30,7 @@ with principals endpoits:
 ## 3. The local host endpoints
 in localhost 127.0.0.1:5000
 
-![INDEX_LOAD](/images/pricipal_load.png)
+![LOAD](/images/principal_load.png)
 
 in localhost 127.0.0.1:5000/query1
 
