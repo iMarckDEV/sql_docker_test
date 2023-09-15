@@ -1,24 +1,46 @@
+# iMarckDEV Blog Repository
+
+Welcome to the iMarckDEV Blog Repository! This repository contains the source code for the [iMarckDEV blog site](https://www.imarck.dev), a platform dedicated to exploring cloud technologies, sharing tutorials, and providing valuable resources for developers.
+
 # Description
-So in this excercise i'll launch a MySql server using Docker in my  local environment, to load some tables and creating some tables and queries:
+So in this excercise i'll launch a server using Docker in a local environment, to load some tables and creating some tables and queries:
 
-1. Lauunch the MySql server in local
+1. Launch the Docker server in local
 
-Based in the  *Dockerfile* in the path ** Docker_local_image/Dockerfile **
+Based in the  *Dockerfile* in the repo
 
 ```bash
-cd Docker_local_image
-docker build -t imarckdev-mysql .
-docker run --name mysql-server -p 3306:3306 -d imarckdev-mysql
+docker image build -t flask-test .
+docker run -p 5000:5000 -d flask-test
 ```
 
 2. The ETL in python
 
-So, basically the scripts in python just load the csv files related in the path *pythonscripts_local*, all those
-files will become a table over the running mySql server.
+So, basically the scripts in python just use flask, and sqlitle2 in *app.py*, 
+with principals endpoits:
 
-
-It's necesary have installed the package 
-
-```bash
-pip install mysql-connector-python
+```python
+@app.route('/') #the index.html, the principal, where just load the related files
+@app.route('/load') #for the success loading files
+@app.route('/employees') #justo to see a dataframe of employees
+@app.route('/query1')
+@app.route('/query2')
 ```
+
+3. The local host endpoints
+in localhost 127.0.0.1:5000
+
+![INDEX_LOAD](/images/pricipal_load.png)
+
+in localhost 127.0.0.1:5000/query1
+![QUERY1](/images/query1.png)
+
+in localhost 127.0.0.1:5000/query2
+![QUERY2](/images/query2.png)
+
+## Join the Community
+Join our vibrant developer community on the iMarckDEV blog site. Connect with fellow developers, ask questions, and share your insights. Together, we can learn, grow, and make a positive impact in the world of technology.
+
+Thank you for your interest in the iMarckDEV Blog Repository. Happy coding!
+
+

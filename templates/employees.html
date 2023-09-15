@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>ShowData iMackDEV </title>
+</head>
+<body>
+    <h1>Employees table:</h1>
+    <table>
+        <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Hire Date</th>
+        <th>Department</th> 
+        <th>Job</th>
+        </tr>
+        
+        {% for row in employees %}
+        <tr>
+        <td>{{ row[0] }}</td>
+        <td>{{ row[1] }}</td>
+        <td>{{ row[2] }}</td> 
+        <td>{{ row[3] }}</td>
+        <td>{{ row[4] }}</td>
+        </tr>
+        {% endfor %}
+        
+    </table>
+</body>
+</html>

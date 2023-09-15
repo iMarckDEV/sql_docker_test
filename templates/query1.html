@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Query1 iMackDEV </title>
+</head>
+<body>
+    <h1>Query1 table:</h1>
+    <table>
+        <tr>
+        <th>Department</th>
+        <th>Job</th>
+        <th>Q1</th>
+        <th>Q2</th>
+        <th>Q3</th>
+        <th>Q4</th>
+        </tr>
+    
+        {% for row in query_results %}
+        <tr>
+        <td>{{ row[0] }}</td>
+        <td>{{ row[1] }}</td>
+        <td>{{ row[2] }}</td>
+        <td>{{ row[3] }}</td>
+        <td>{{ row[4] }}</td>
+        <td>{{ row[5] }}</td>
+        </tr>
+        {% endfor %}
+    
+    </table>
+</body>
+</html>
